@@ -3,7 +3,7 @@ kind : Pod
 metadata:
   name: mypod
 spec:
-hostNetwork: true
+  hostNetwork: true
   containers:
     - name: myfirst container
       image: apache2
