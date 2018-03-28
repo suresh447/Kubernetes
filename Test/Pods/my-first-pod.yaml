@@ -6,8 +6,8 @@ spec:
   #hostNetwork: true
   containers:
     - name: my-first-container
-      image: httpd
+      image: jenkins
       ports:
-        - containerPort: 80
+        - containerPort: 8080
     
                   
