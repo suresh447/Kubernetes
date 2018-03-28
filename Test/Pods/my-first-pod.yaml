@@ -6,7 +6,7 @@ spec:
   #hostNetwork: true
   containers:
     - name: my-first-container
-      image: httpd
+      image: tomcat
       ports:
         - containerPort: 8080
     
