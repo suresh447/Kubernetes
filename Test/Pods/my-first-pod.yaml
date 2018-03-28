@@ -8,6 +8,6 @@ spec:
     - name: my-first-container
       image: httpd
       ports:
-        - containerPort: 80
+        - containerPort: 8080
     
                   
