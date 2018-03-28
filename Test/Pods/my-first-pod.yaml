@@ -5,7 +5,7 @@ metadata:
 spec:
   hostNetwork: true
   containers:
-    - name: myfirst container
+    - name: my-first-container
       image: apache2
       ports:
         - containerPort: 8080
