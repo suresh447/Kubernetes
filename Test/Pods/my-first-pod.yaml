@@ -6,7 +6,7 @@ spec:
   #hostNetwork: true
   containers:
     - name: my-first-container
-      image: nginx
+      image: httpd
       ports:
         - containerPort: 80
     
