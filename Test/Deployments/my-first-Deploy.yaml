@@ -3,7 +3,7 @@ kind: Deployment
 metadata:
   name: my-deployment
   labels:
-    app: jenkins
+    app: nginx
 spec:
   replicas: 2
   strategy:
@@ -13,16 +13,16 @@ spec:
       maxUnavailable: 1
   selector:
     matchLabels:
-      app: jenkins  
+      app: nginx  
   template:
     metadata:
       labels:
-        app: jenkins
+        app: nginx
     spec:
       hostNetwork: true
       containers:
-      - image: jenkins
-        name: my-jenkins
+      - image: nginx
+        name: my-nginx
         ports:
-        - containerPort: 8080
+        - containerPort: 80
           protocol: TCP
