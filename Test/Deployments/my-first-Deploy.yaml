@@ -25,4 +25,4 @@ spec:
         name: my-nginx
         ports:
         - containerPort: 80
-          protocol: TCP
+          
