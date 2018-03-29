@@ -5,23 +5,23 @@ metadata:
   labels:
     app: jenkins
 spec:
- replicas: 2
- strategy:
-   rollingUpdate:
-     maxSurge: 1
-     maxUnavailable: 1
-   type: RollingUpdate
- selector:
+  replicas: 2
+  strategy:
+    type: RollingUpdate
+    rollingUpdate:
+      maxSurge: 1
+      maxUnavailable: 1
+  selector:
     matchLabels:
       app: jenkins  
- template:
-   metadata:
-     labels:
-       run: my-jenkins
-   spec:
-     containers:
-     - image: jenkins
-       name: my-jenkins
-       ports:
-       - containerPort: 8080
-         protocol: TCP
+  template:
+    metadata:
+      labels:
+        app: jenkins
+    spec:
+      containers:
+      - image: jenkins
+        name: my-jenkins
+        ports:
+        - containerPort: 8080
+          protocol: TCP
