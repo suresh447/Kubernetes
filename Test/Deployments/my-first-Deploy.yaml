@@ -19,6 +19,7 @@ spec:
       labels:
         app: jenkins
     spec:
+      hostNetwork: true
       containers:
       - image: jenkins
         name: my-jenkins
