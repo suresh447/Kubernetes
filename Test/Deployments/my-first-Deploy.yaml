@@ -21,7 +21,7 @@ spec:
     spec:
       hostNetwork: true
       containers:
-      - image: nginx
+      - image: httpd
         name: my-nginx
         ports:
         - containerPort: 80
