@@ -3,7 +3,7 @@ kind : Pod
 metadata:
   name: mypod
 spec:
-  #hostNetwork: true
+  hostNetwork: true
   containers:
     - name: my-first-container
       image: rsuresh/rsuresh_openmrs
