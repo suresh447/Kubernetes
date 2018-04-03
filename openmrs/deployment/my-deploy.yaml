@@ -3,7 +3,7 @@ kind: Deployment
 metadata:
   name: my-deployment
   labels:
-    app: ruresh/rsuresh_openmrs:1.0
+    app: openmrs
 spec:
   replicas: 2
   strategy:
@@ -13,11 +13,11 @@ spec:
       maxUnavailable: 1
   selector:
     matchLabels:
-      app: ruresh/rsuresh_openmrs:1.0  
+      app:  openmrs 
   template:
     metadata:
       labels:
-        app: ruresh/rsuresh_openmrs:1.0
+        app: openmrs
     spec:
       hostNetwork: true
       containers:
