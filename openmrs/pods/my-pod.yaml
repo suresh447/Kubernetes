@@ -8,4 +8,5 @@ spec:
     - name: my-first-container
       image: rsuresh_openmrs
       ports:
-        - containerPort: 8080
+      - containerPort: 8085
+          protocol: TCP
