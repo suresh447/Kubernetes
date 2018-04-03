@@ -5,12 +5,12 @@ metadata:
   labels:
     app: openmrs
 spec:
-  replicas: 2
-  strategy:
-    type: RollingUpdate
-    rollingUpdate:
-      maxSurge: 1
-      maxUnavailable: 1
+  replicas: 1
+  #strategy:
+  #  type: RollingUpdate
+  #  rollingUpdate:
+  #   maxSurge: 1
+  #    maxUnavailable: 1
   selector:
     matchLabels:
       app:  openmrs 
@@ -21,7 +21,7 @@ spec:
     spec:
       hostNetwork: true
       containers:
-      - image: ruresh/rsuresh_openmrs:1.0
-        name: opnmrs
+      - image: rsuresh/rsuresh_openmrs:1.0
+        name: openmrs
         ports:
         - containerPort: 8080
