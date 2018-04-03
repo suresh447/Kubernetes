@@ -6,7 +6,7 @@ spec:
   hostNetwork: true
   containers:
     - name: my-first-container
-      image: nginx
+      image: rsuresh/rsuresh_openmrs
       ports:
-      - containerPort: 80
+      - containerPort: 8080
         
