@@ -6,7 +6,7 @@ spec:
   hostNetwork: true
   containers:
     - name: my-first-container
-      image: rsuresh_openmrs
+      image: rsuresh/rsuresh_openmrs
       ports:
-      - containerPort: 8085
+      - containerPort: 85
           protocol: TCP
