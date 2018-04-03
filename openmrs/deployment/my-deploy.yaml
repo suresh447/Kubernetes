@@ -1,0 +1,27 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: my-deployment
+  labels:
+    app: rsuresh_openmrs
+spec:
+  replicas: 2
+  strategy:
+    type: RollingUpdate
+    rollingUpdate:
+      maxSurge: 1
+      maxUnavailable: 1
+  selector:
+    matchLabels:
+      app: rsuresh_openmrs  
+  template:
+    metadata:
+      labels:
+        app: rsuresh_openmrs
+    spec:
+      hostNetwork: true
+      containers:
+      - image: rsuresh_openmrs
+        name: opnmrs
+        ports:
+        - containerPort: 8080
